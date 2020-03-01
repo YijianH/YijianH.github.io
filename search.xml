@@ -1,6 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Begin Again</title>
+    <url>/2020/03/01/Begin-Again/</url>
+    <content><![CDATA[<p>Meet you in March. ^O^</p>
+<a id="more"></a> 
+
+<blockquote>
+<p>捣鼓将近一周，我的博客小站终于在今天正式营业啦，不知道前台的小可爱tay大家是否喜欢呢！话不多说，下面是我自己关于建站的一些share，上菜！</p>
+</blockquote>
+<hr>
+<p>A Map</p>
+<ol>
+<li>框架介绍</li>
+<li>建站流程</li>
+<li>简单优化</li>
+<li>本地恢复</li>
+</ol>
+<hr>
+<h2 id="框架介绍"><a href="#框架介绍" class="headerlink" title="框架介绍"></a>框架介绍</h2><p><strong><strong>1.1 Github Pages</strong></strong></p>
+<p><a href="https://pages.github.com/" target="_blank" rel="noopener">Github Pages</a>是github提供给用户来展示个人或项目主页的静态网页系统。每个注册用户都可以使用自己的github项目创建，上传静态页面的HTML文件，github会帮你自动更新页面。</p>
+<p><strong><strong>1.2 Hexo</strong></strong></p>
+<p><a href="https://hexo.io/zh-cn/index.html" target="_blank" rel="noopener">Hexo</a>是一个基于Node.js的静态博客框架，依赖少易于安装使用，可以方便地生成静态网页托管在Github上，并一键部署到GitHub Pages.<br><em>参考数据流图</em><br><img src="https://pic3.zhimg.com/v2-df6a6f41c606a19a3c90329e48685297_r.jpg" alt="参考数据流图"></p>
+<hr>
+<h2 id="建站流程"><a href="#建站流程" class="headerlink" title="建站流程"></a>建站流程</h2><p>OS: Windows 10</p>
+<hr>
+<p><strong><strong>2.1 环境配置</strong></strong></p>
+<ol>
+<li><p>Github创建个人仓库<br>(注意：这个仓库名比较特殊，取名格式为userName.github.io，用户名为github的用户名，这是固定写法。我觉得应该是github后台通过这种写法可以根据仓库属性匹配到这是一个pages项目）</p>
+</li>
+<li><p>安装Git<br>何为<a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a>?简单来说Git是开源的分布式版本控制系统。这里我们的网站在本地搭建好后，需要使用Git同步到Github上。最近我也在了解Git的细节，强烈推荐廖雪峰老师的<a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">Git教程</a>。<br>最后从Git官网<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">下载</a>安装包安装即可，具体过程可参考网上其他教程。</p>
+</li>
+<li><p>安装Node.js<br>Hexo基于<a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a>，Node.js下载地址：<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">Download|Node.js</a></p>
+</li>
+<li><p>配置Git及生成ssh密钥文件</p>
+<ul>
+<li><p>配置信息</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name &quot;Your Name&quot;</span><br><span class="line">$ git config --global user.email &quot;email@example.com&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>生成ssh密钥文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;your GitHub register email&quot;</span><br></pre></td></tr></table></figure>
+<p>接下来就是将生成的公钥部署到GitHub，具体操作请动用你强大的搜索能力哈……！</p>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong><strong>2.2 安装Hexo</strong></strong><br>Hexo就是我们的个人博客网站的框架，这里需要自己在电脑里创建一个文件夹，可以命名为Blog，Hexo框架与以后你自己发布的网页都在这个文件夹中。创建好后，进入文件夹中，按住shift键，右击鼠标点击命令行(Git Bash)</p>
+<p>具体请参考<a href="https://hexo.io/zh-cn/index.html" target="_blank" rel="noopener">Hexo官方教程</a>和<a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">大佬分享的地表最强建站教程Github+Hexo</a></p>
+<p><strong><strong>2.3 站点文件配置</strong></strong><br><strong><strong>2.4 主题文件配置</strong></strong><br>我选择的是<a href="https://theme-next.org/" target="_blank" rel="noopener">NexT</a>主题哈  |<a href="http://theme-next.iissnan.com/theme-settings.html" target="_blank" rel="noopener">NexT配置文档</a><br><strong><strong>2.5 个性化设置</strong></strong></p>
+<ul>
+<li>头像</li>
+<li>背景</li>
+<li>侧栏菜单</li>
+<li>标签云、分类</li>
+<li>网站favicon(适配PC端、客户端)<a href="https://realfavicongenerator.net/" target="_blank" rel="noopener">favicon generator</a></li>
+<li>站点统计</li>
+<li>本地搜索</li>
+<li>站点footer个性化</li>
+<li><a href="https://github.com/EYHN/hexo-helper-live2d/blob/master/README.zh-CN.md" target="_blank" rel="noopener">live2d</a>看板娘 快看右下角的小可爱tay</li>
+</ul>
+<hr>
+<h2 id="简单优化"><a href="#简单优化" class="headerlink" title="简单优化"></a>简单优化</h2><p>由于GitHub的服务器在国外，后来发现，在国内访问自己的博客时，加载速度有时候很慢，特别是当deploy的博客文件有点大时，让我等到心态崩。。。</br></p>
+<ul>
+<li><a href="https://www.gulpjs.com.cn/" target="_blank" rel="noopener">Gulp</a><br>如果你打开生成的public文件夹里面的html、css、js源文件，你就会发现里面有大段的空白，这些空白占据着一定的空间。gulp是一个基于Node.js的自动化构建工具，我们可以通过一些gulp插件实现对html、css、js、image等静态资源的高效压缩，通过压缩这些静态资源，可以减少请求的数据量从而达到优化博客访问速度的目的。</li>
+<li>图床<br>采用外部链接访问加载图片 而不是每次都将本地图片上传到仓库中 推荐<a href="https://www.qiniu.com/" target="_blank" rel="noopener">七牛云</a></li>
+<li>Gulp压缩js文件问题<br>由于gulp-uglify不兼容es6 [ECMAScript 6.0（以下简称 es6）是 JavaScript 语言的下一代标准，已经在 2015 年 6 月正式发布了,但目前的各大浏览器并不完全支持].<br>我遇到的问题是在执行gulp task在压缩js文件时报错了。。。<br>我尝试了两种方法：<ol>
+<li>gulp+babel将es6转es5<br>然鹅，我整来整去好几天，不知道哪错了，一直不成功，这。。。</li>
+<li>利用gulp为解决兼容问题暂时推出的一款插件 <a href="https://www.npmjs.com/package/gulp-uglify-es" target="_blank" rel="noopener">gulp-uglify-es</a><br>是直接支持es6而不是将es6转成es5 没想到吧 经过实践 make it okay 成功了！<br>在这里非常感谢这位外国朋友的<a href="https://maologue.com/Optimize-Hexo-with-Gulp/" target="_blank" rel="noopener">博文</a></li>
+</ol>
+</li>
+</ul>
+<hr>
+<h2 id="本地恢复"><a href="#本地恢复" class="headerlink" title="本地恢复"></a>本地恢复</h2><p>当遇到某些情况如换电脑时，为了我们博客的可持续发展，当然要做好备份工作啦(主要是备份环境配置如依赖包啊等等)。本质上，Hexo是将本地的md文件编译成静态文件上传到github上的，建议是将本地的整个Hexo项目（blog）原件同步提交到github站点。当然，因为public文件在每次执行hexo操作时都会生成，所以也可以只需备份除public以外的文件就行了。这里有两种方法：</p>
+<ul>
+<li>可以新建一个仓库</li>
+<li>在原有GitHub仓库下新建一个分支（推荐）<br>【遇到bug时一定要充分利用好身边的资源，开源多香啊(狗头)。搜索、解决问题的能力往往就是这样一点一点累积的，如StackOverflow等技术问答网站都是很给力的哦】</li>
+</ul>
+<hr>
+<p>自己第一次动手搭博客，累并坚持着。虽然有些地方我写的不是很全（&gt;&gt;偷懒&lt;&lt;）,还是很开心能和大家分享这次经历的点滴，也非常感谢那些优秀博主的经验分享，给予了我很大的帮助。今天就先写到这里啦，up~</p>
+<blockquote>
+<p><strong>March 1st, let’s make more contens and share,to be continue…</strong></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Build steps</category>
+      </categories>
+      <tags>
+        <tag>Github Pages</tag>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2020/02/10/Hello-World/</url>
     <content><![CDATA[<p>Welcome to <a href="https://www.onej.xyz/">Onej</a>! This is my very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.<br> <a id="more"></a> </p>
