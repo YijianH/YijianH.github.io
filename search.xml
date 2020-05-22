@@ -1,6 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>os_ch1</title>
+    <url>/2020/05/22/os-ch1/</url>
+    <content><![CDATA[<p>愿书本变薄，换大脑清晰。</p>
+<a id="more"></a>
+<blockquote>
+<p>这是我的操作系统阶段复习。</p>
+</blockquote>
+<h2 id="CH1-认识操作系统"><a href="#CH1-认识操作系统" class="headerlink" title="CH1 认识操作系统"></a>CH1 认识操作系统</h2><hr>
+<p><strong>一、操作系统的历史</strong></p>
+<blockquote>
+<p>计算机、硬件的发展(moor定律)、需求，催生了操作系统的诞生</p>
+</blockquote>
+<p><strong><strong>1 第一台电子计算机 ENIAC</strong></strong></br></p>
+<blockquote>
+<p>记了又忘、忘了又记…</br></p>
+</blockquote>
+<p>· 02/14/1946<br>· 宾大<br>· 莫克利和艾克特<br>· 美国国防部用于弹道计算</br><br><strong><strong>2 还没有OS</strong></strong><br>· 人工操作方式</p>
+<blockquote>
+<p>通过纸带或卡片的形式将程序或数据读入到计算机系统</p>
+<ul>
+<li>CPU等计算机资源利用率低 而且由于人工操作 等待IO的时间过长 效率低</br></li>
+<li>CPU速度和IO速度严重不匹配</li>
+</ul>
+</blockquote>
+<p>· Off-Line I/O</p>
+<blockquote>
+<p>脱机输入输出方式，除了主机外，新增一台外围机用于控制数据等在内存与磁带间的读写 相当于把与外设等打交道的任务交给外围机。 主机需要时只需从内存读取就ok了 不用浪费太多时间自己访问外存，毕竟cpu时间很宝贵 应该花在重要的事情上</br></p>
+<ul>
+<li>将与外存（磁带）等打交道的工作交给外围机，减少了CPU等待io的时间</li>
+<li>提高了io速度</br></li>
+</ul>
+</blockquote>
+<p><strong><strong>3 因为需要所以OS</strong></strong><br>1 单道批处理系统</p>
+<blockquote>
+<p>作业成批——&gt;磁带——&gt;监督程序——&gt;按顺序每次将单个作业装入内存——&gt;给控制权——&gt;结束——&gt;归还控制权——&gt;循环到所有作业都已得到执行</p>
+</blockquote>
+<ul>
+<li>系统资源得不到充分利用<blockquote>
+<p>由于是单作业执行 每次有一个作业在系统内执行 所以在等待io的时候cpu只能空闲</br></p>
+</blockquote>
+</li>
+</ul>
+<p>2 多道批处理系统</p>
+<blockquote>
+<p>多道程序设计<br>作业调度 交替执行<br>资源利用率高 系统吞吐量大<br>但平均周转时间长（等待io时 作业间来回切换频繁）</br></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>正是为了更好的解决资源管理等问题，OS来了！</br></p>
+</blockquote>
+<p><strong><strong>4 OS来了</strong></strong><br>1 分时OS</br></p>
+<blockquote>
+<p>轮转运行 时间片<br>2 实时OS(RTOS)<br>系统的正确性不仅由计算的逻辑结构决定，还与产生结果的时间有关</br><br>分类：</p>
+</blockquote>
+<ol>
+<li>工控系统</li>
+<li>信息查询系统</li>
+<li>多媒体系统</li>
+<li><em>嵌入式系统</em><blockquote>
+<p>根据是否严格遵循截至时间划分为硬实时和软实时</p>
+</blockquote>
+</li>
+</ol>
+<hr>
+<p><strong>二、操作系统</strong></p>
+<blockquote>
+<p>操作系统~=程序集合，系统软件</br></p>
+</blockquote>
+<ul>
+<li>定义D: 是一组能有效组织和管理计算机资源和软件资源，合理对各种作业进行调度、方便用户使用的程序集合</br></li>
+<li>基本特性C: <blockquote>
+<p>为了提高资源利用率、系统吞吐量</p>
+</blockquote>
+</li>
+</ul>
+<p>1 并发</p>
+<blockquote>
+<p>并发 vs 并行<br>同一时刻 vs 同一时间间隔<br>多道程序设计就是一个并发的example</p>
+</blockquote>
+<ul>
+<li>进程</br><blockquote>
+<p>能独立运行，操作系统分配资源的基本单位</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<p>2 共享</p>
+<blockquote>
+<p>互斥共享（被占用了得等它还回来）<br>同时访问（通过某种手段使得效果“看起来像”而已）<br></br></p>
+</blockquote>
+<p>3 虚拟</p>
+<blockquote>
+<p>512M内存怎么能跑4G的游戏呢？</br></p>
+</blockquote>
+<ul>
+<li>时空复用 对空闲时间的利用</br><blockquote>
+<p>如多道程序设计就是利用cpu在等待io的这段空闲时间切换到另一道程序执行的</p>
+</blockquote>
+</li>
+<li>空分复用 利用存储器的空闲分区<blockquote>
+<p>虚拟存储技术 内存的分时复用 部分置换、阶段输出</p>
+</blockquote>
+</li>
+</ul>
+<p>4 异步</p>
+<blockquote>
+<p>程序的执行 可能一气呵成 还允许走走停停</p>
+</blockquote>
+<p><strong>三、划重点</strong></p>
+<blockquote>
+<p>什么是OS?</p>
+</blockquote>
+<ol>
+<li>软件 </li>
+<li>接口</li>
+<li>硬件-OS-用户</li>
+<li>资源管理：处理机 存储器 IO设备 文件（数据、程序）</li>
+</ol>
+<hr>
+<p>pr：</p>
+<ul>
+<li>客户服务器模式（C/S）</li>
+<li>面向对象（数据结构+操作过程）</li>
+</ul>
+<hr>
+<blockquote>
+<p>Linux IBM Microsoft</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>OS</category>
+      </categories>
+      <tags>
+        <tag>lesson review</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Begin Again</title>
     <url>/2020/03/01/Begin-Again/</url>
     <content><![CDATA[<p>Meet you in March. ^O^</p>
