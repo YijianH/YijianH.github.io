@@ -51,9 +51,13 @@
 <blockquote>
 <p>正是为了更好的解决资源管理等问题，OS来了！</br></p>
 </blockquote>
-<p><strong><strong>4 OS来了</strong></strong><br>1 分时OS</br></p>
+<p><strong><strong>4 OS来了</strong></strong><br>1 分时OS</p>
 <blockquote>
-<p>轮转运行 时间片<br>2 实时OS(RTOS)<br>系统的正确性不仅由计算的逻辑结构决定，还与产生结果的时间有关</br><br>分类：</p>
+<p>轮转运行 时间片</p>
+</blockquote>
+<p>2 实时OS(RTOS)</p>
+<blockquote>
+<p>系统的正确性不仅由计算的逻辑结构决定，还与产生结果的时间有关<br>分类：</p>
 </blockquote>
 <ol>
 <li>工控系统</li>
